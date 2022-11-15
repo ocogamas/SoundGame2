@@ -14,6 +14,6 @@ public class GameController : MonoBehaviour
 
     private void onTouchDownSoundCube(SoundCube touchDownedSoundCube)
     {
-        soundManager.PlayRandom4();
+        soundManager.PlayRandom5();
     }
 }
