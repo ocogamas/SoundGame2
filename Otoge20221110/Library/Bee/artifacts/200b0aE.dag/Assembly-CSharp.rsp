@@ -354,6 +354,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/SoundCube.cs"
+"Assets/Scripts/SoundManager.cs"
 -langversion:9.0
 
 /deterministic

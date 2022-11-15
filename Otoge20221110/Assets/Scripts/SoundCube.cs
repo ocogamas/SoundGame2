@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SoundCube : MonoBehaviour
 {
-    private System<SoundCube> onTouchedSoundCube;
+    private Action<SoundCube> onTouchedSoundCube;
     public void Initialize(Action<SoundCube> onTouchedSoundCube)
     {
-        
+        this.onTouchedSoundCube = onTouchedSoundCube;
     }
 
     /// <summary>
@@ -15,7 +15,7 @@ public class SoundCube : MonoBehaviour
     /// </summary>
     public void OnTouchDown()
     {
-        Debug.Log($"touch down");
+        onTouchedSoundCube?.Invoke(this);
     }
 
     public void OnClick()

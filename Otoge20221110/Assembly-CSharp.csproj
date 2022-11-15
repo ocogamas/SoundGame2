@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/GameController.cs" />
      <Compile Include="Assets/Scripts/SoundCube.cs" />
+     <Compile Include="Assets/Scripts/SoundManager.cs" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.6f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] 
-    private SoundCube soundCube;
+    [SerializeField] private SoundCube soundCube;
+
+    [SerializeField] private SoundManager soundManager;
     
     void Start()
     {
@@ -14,6 +14,6 @@ public class GameController : MonoBehaviour
 
     private void onTouchDownSoundCube(SoundCube touchDownedSoundCube)
     {
-        
+        soundManager.PlayRandom4();
     }
 }
