@@ -21,6 +21,7 @@ public class SoundCube : MonoBehaviour
     }
 
     [SerializeField] private Material material;
+    [SerializeField] private Animator tapAnimator;
 
     private Action<SoundCube> onTouchedSoundCube;
     private SoundType soundType;
@@ -55,6 +56,8 @@ public class SoundCube : MonoBehaviour
         material.color = getRandomColor();
 
         rotateVector = new Vector3(Random.Range(0, 0.04f), Random.Range(0, 0.04f), Random.Range(0, 0.04f));
+
+        tapAnimator.Play("Tap");
     }
 
     private Color getRandomColor()
