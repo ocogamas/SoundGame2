@@ -39,7 +39,7 @@ public class SoundCube : MonoBehaviour
         this.soundType = soundType;
         this.keyType = keyType;
 
-        material.color = getRandomColor();
+        material.color = Utility.GetRandomColor();
     }
 
     public void Update()
@@ -53,21 +53,12 @@ public class SoundCube : MonoBehaviour
     public void OnTouchDown()
     {
         onTouchedSoundCube?.Invoke(this);
-        material.color = getRandomColor();
+        material.color = Utility.GetRandomColor();
 
         rotateVector = new Vector3(Random.Range(0, 0.04f), Random.Range(0, 0.04f), Random.Range(0, 0.04f));
 
         tapAnimator.Play("Tap");
     }
 
-    private Color getRandomColor()
-    {
-        Color color = new Color(
-            Random.Range(0.0f, 1.0f),
-            Random.Range(0.0f, 1.0f),
-            Random.Range(0.0f, 1.0f),
-            1.0f);
-        
-        return color;
-    }
+
 }
